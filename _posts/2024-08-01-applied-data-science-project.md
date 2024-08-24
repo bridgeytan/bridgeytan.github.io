@@ -22,7 +22,7 @@ Our team focuses on how we can improve British Airway's business via enhancing c
 
 The project plan following the CRISP-DM framework is as below:
 
-<img width="401" alt="image" src="https://github.com/user-attachments/assets/4031a3e4-64a0-453f-920a-14434f74f39b">
+<img width="800" alt="image" src="https://github.com/user-attachments/assets/4031a3e4-64a0-453f-920a-14434f74f39b">
 
 
 
