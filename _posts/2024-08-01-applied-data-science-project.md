@@ -116,7 +116,22 @@ Words in the Reviewbody column were tokenised.
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/74018eca-5e9e-40f0-b90d-b5890a84332f">
 </p>
 
-Stopwords were removed using the NLTK corpus. After looking through the remaining most frequent tokens, domain stopwords were also determined and removed. 
+Stopwords were removed using the NLTK corpus. After looking through the remaining most frequent tokens, domain stopwords were also determined and removed. The words are 'airline', 'british', 'airway', 'airways', 'aircraft', 'airlines', 'plane','flight','flights','ba'.
+
+#### Removal of short characters
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/7f161740-66d9-476e-96e6-1baae1ca8716">
+</p>
+Words like 'us', 'on' and 'h' were removed.
+
+#### Lemmatization, stemming and POS tagging and removal
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/7dc66948-1b0e-4670-bdfb-a9366f4e9257">
+</p>
+
+Lemmatization was conducted to normalise the tokens into a single base form e.g. flying to fly. Map POS tags to WordNet POS Tags was used to facilitate lemmatization e.g. conjunctions, prepositions, determiners, verbs etc. Certain POS such as coordinating conjunction, preposition, determiner, personal pronouns were removed as they do not add meaningful information for subsequent clustering/topic modelling. 
+Stemming was not performed to retain context-specific terms for further analysis. 
+
 
 ### Modelling
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
