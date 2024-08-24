@@ -1,7 +1,7 @@
 title: Data Science Project Showcase
 author: Bridget Tan
-  name: Bridget Tan
-  email: 23a850m@mymail.nyp.edu.sg
+name: Bridget Tan
+email: 23a850m@mymail.nyp.edu.sg
 
 # The `>` after `description:` means to ignore line-breaks until next key.
 # If you want to omit the line-break after the end of text, use `>-` instead.
