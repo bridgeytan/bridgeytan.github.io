@@ -22,13 +22,17 @@ Our team focuses on how we can improve British Airway's business via enhancing c
 | 3   | To identify areas of customer satisfaction for marketing purposes, to improve business by 10%   | Bridget |
 | 4   | To reduce negative review sentiments by 10% to improve customer satisfaction and demand.         | Vivienne|
 
-The project plan following the CRISP-DM framework is as below:
+<br>
+The project plan following the CRISP-DM framework is as below:  
 
 <p align="center">
   <img width="800" alt="image" src="https://github.com/user-attachments/assets/4031a3e4-64a0-453f-920a-14434f74f39b">
 </p>
 
-The dataset is retrieved from Kaggle, which contained 3700 rows and 20 columns of customer reviews of British Airways, scraped from airlinequality.com from 2015 to 2023. Columns as such:
+<br>
+      
+### Dataset
+The dataset is retrieved from Kaggle, which contained 3700 rows and 20 columns of customer reviews of British Airways, scraped from airlinequality.com from 2015 to 2023. Columns as such:  
 
 <p align="center">
   <img width="1000" alt="image" src="https://github.com/user-attachments/assets/fe6573ae-1d0b-4bf9-8bf3-dd388a89ed7f">
@@ -57,11 +61,9 @@ The dataset is retrieved from Kaggle, which contained 3700 rows and 20 columns o
 
 
 ## Work Accomplished
-Document your work done to accomplish the outcome
 
 ### Data Preparation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
-
+  
 #### Converting fields into appropriate data types
 
 The 'Datetime' and 'Dateflown' are not in datetime format, so they need to be converted from string to datetime format.
@@ -72,7 +74,7 @@ The 'Datetime' and 'Dateflown' are not in datetime format, so they need to be co
 
 #### Removal of missing values
 
-Missing values were detected in several fields:
+Missing values were detected these fields:
 **Datetime:** (~20.5%)  
 **TypeOfTraveller:** (~20.8%)  
 **Route:** (~20.9%)  
@@ -85,9 +87,36 @@ Missing values were detected in several fields:
 **InflightEntertainment:** (~31.1%)  
 **Wifi&Connectivity:** (~83.5%)  
 
+For columns where missing values make up less than 10% of the dataset (OverallRating, CabinStaffService, SeatComfort), missing values were removed. 
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/d4e387a2-9be3-4e97-84c2-297b901bc660">
+</p>
 
+#### Normalise all to lowercase
 
-#### Text-preprocessing
+All text within the ReviewBody column was normalised into lowercase.
+
+#### Removal of punctuation and special characters
+
+Presence of non-alphabetical characters (e.g. Couldnâ€™t, KeflavÃ­k) and punctuation in text dataset (e.g. !()-[]{};:'"\,<>./?@#$%^&*_~) were removed.
+
+#### Removal of dates, prices and flight numbers
+
+Figures that might represent dates, prices or flight numbers (e.g. 747-400, BA12) were removed as they are specific and may not necessarily provide additional information on the broad topic. Numbers were also removed.
+
+#### Tokenisation
+
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/615c2c61-c5c9-4e8e-85d5-1f3db859d9cd">
+</p>
+Words in the Reviewbody column were tokenised. 
+
+#### Stopword removal
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/74018eca-5e9e-40f0-b90d-b5890a84332f">
+</p>
+
+Stopwords were removed using the NLTK corpus. After looking through the remaining most frequent tokens, domain stopwords were also determined and removed. 
 
 ### Modelling
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
