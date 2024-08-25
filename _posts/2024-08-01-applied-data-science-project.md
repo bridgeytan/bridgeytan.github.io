@@ -147,8 +147,45 @@ We will compare two models, Latent Dirichlet Allocation (LDA) and Bidirectional 
 
 #### LDA
 
-LDA is a widely used topic modelling technique that provides interpretable results and can be scaled efficiently. 
+LDA is a widely used topic modelling technique that provides interpretable results and can be scaled efficiently. To determine the ideal number of topics, the LDA model was run assuming the number of topics 1 to 21, and the perplexity score subsequently charted. Based on the graph below, the higher the number of topics, the worse the perplexity score. This suggests that the number of topics were small. 
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/10a2ca1a-cf69-4e57-bd18-2d0db1960213">
+</p>
 
+To further help analysing the optimal number of topics, the intertopic distance map was used. There are 3 clear clusters that can be seen (circles that are not overlapping, with great distance between each cluster).
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/54c25dce-404b-4f01-804b-30b6671b2059">
+</p>
+
+The parameters were then tuned for 3 topics, and these are the most prominent terms per topic. 
+
+**Topic 1:** 0.012*"heathrow" + 0.009*"crew" + 0.008*"seat" + 0.008*"cabin" + 0.008*"time" + 0.008*"board" + 0.007*"service" + 0.007*"staff" + 0.007*"food" + 0.007*"first"  
+**Topic 2:** 0.021*"seat" + 0.018*"good" + 0.014*"crew" + 0.013*"food" + 0.012*"service" + 0.012*"time" + 0.011*"cabin" + 0.008*"london" + 0.007*"economy" + 0.007*"well"  
+**Topic 3:** 0.017*"good" + 0.013*"seat" + 0.010*"service" + 0.008*"staff" + 0.008*"get" + 0.008*"time" + 0.007*"lounge" + 0.007*"crew" + 0.006*"food" + 0.006*"london"  
+
+For ease of interpretation, these can be transformed into word clouds. The bigger the word, the more important.  The number of words per topic were increased to have better context.
+#### Topic 1
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/482b88bb-1d3c-4f71-8be2-3bbadd8390db">
+</p>
+
+The most prominent keyword is "Heathrow", suggesting that the 1st topic focuses on the experience in Heathrow airport, in particular the good service provided by the cabin crew.  
+
+Some reviews under this topic includes reviews such as “The ground staff at London Heathrow are very polite and helpful” and " Flew Zurich to London Heathrow. Very friendly staff, great choice of complimentary drinks” which help to cement this idea.
+
+#### Topic 2
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/b6ef3396-47b8-4920-a11e-08c1628b6a4e">
+</p>
+
+Common words such as “Lounge”, “class”, “business” and “first” suggests that the topic is about the first and business class, likely focusing on the comfort of the seats. Some reviews under this topic includes reviews such as “First Class felt exclusive, the dedicated crew were … proactive, friendly, very respectful … The seat… spacious, well designed and very comfortable.”
+
+#### Topic 3
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/915295cb-d502-4a4a-92c8-1e9a7930a53c">
+</p>
+
+This topic most likely focuses on timeliness of the flights, and also general experience overall. Reviews under this topic include “Due to delayed take off I risked missing my connecting flight. Thanks to the excellent premium host service… I managed to be on time!”
 
 
 ### Evaluation
