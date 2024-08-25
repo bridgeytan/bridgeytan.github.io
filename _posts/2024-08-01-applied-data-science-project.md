@@ -5,7 +5,6 @@ title: "Applied Data Science Project Documentation"
 categories: ITD214
 ---
 ## Project Background
-Provide an overview of your team's project business goals and objectives and state the objective that you are working on. 
 
 ### British Airways: Improving Customer Experience
 
@@ -246,7 +245,6 @@ In terms of actionable insights, these results can serve as great starting point
 Nonetheless, all of these topics have to be further analysed alongside a similar analysis of negative reviews. If the same topics of discussion occur in both positive and negative reviews, it is an indication that the experiences and services provided by British Airways are not consistent. If that is the case, then further improvement is needed to ensure that there is uniformity across the services provided. If the topics in positive reviews and negative reviews are different, then there are clear areas where British Airways have done well and areas that need improvement.
 
 ## AI Ethics
-Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
 #### Privacy
 
@@ -275,4 +273,4 @@ The insights from modelling is used towards good and responsible intentions i.e.
 Transparency is needed to build trust. In this scenario, limited and open source data is used for a very specific scope, so there is little cause for worry. It is the responsibility of the user to explain the workings of the model, including data pipeline, AI algorithm and output processing and analysis to relevant stakeholders. 
 
 ## Source Codes and Datasets
-Upload your model files and dataset into a GitHub repo and add the link here. 
+[Link to all datasets and source codes ](https://github.com/bridgeytan/Bridget-Tan)
