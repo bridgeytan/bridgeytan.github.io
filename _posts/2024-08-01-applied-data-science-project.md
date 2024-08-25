@@ -252,7 +252,9 @@ Discuss the potential data science ethics issues (privacy, fairness, accuracy, a
 
 The information was scraped online on airlinequality.com, which is open to the public. In terms of personally identifable information, the original dataset only contained the names of the reviewers, which was not used for analysis or shown in the analysis. No other personal or private information was obtained.  
 
-In terms of consent, the GDPR has outlined 6 reasons in which web scraping is lawful for processing personal data. One of the reasons is Legitimate Interests, where "Legitimate interests pursued by the data controller or a third party can serve as a lawful basis. This involves balancing the interests of the scraper against the privacy rights of the individuals." (https://www.blog.datahut.co/post/guide-to-legal-and-transparent-data-practices-in-web-scraping-under-gdpr#:~:text=Consent%3A%20If%20individuals%20have%20given%20explicit%20and%20informed,third%20party%20can%20serve%20as%20a%20lawful%20basis.) In this instance, a company scraping online reviews to analyse public sentiment about its brand, in order to improve goods and services provided, may be considered as legitimate interest.  
+In terms of consent, the GDPR has outlined 6 reasons in which web scraping is lawful for processing personal data. One of the reasons is Legitimate Interests, where "Legitimate interests pursued by the data controller or a third party can serve as a lawful basis. This involves balancing the interests of the scraper against the privacy rights of the individuals." In this instance, a company scraping online reviews to analyse public sentiment about its brand, in order to improve goods and services provided, may be considered as legitimate interest.  
+
+Source: https://www.blog.datahut.co/post/guide-to-legal-and-transparent-data-practices-in-web-scraping-under-gdpr#:~:text=Consent%3A%20If%20individuals%20have%20given%20explicit%20and%20informed,third%20party%20can%20serve%20as%20a%20lawful%20basis.
 
 #### Fairness
 
@@ -266,9 +268,11 @@ The accuracy of topic modelling is done to the best of abiliies to ensure that t
 
 #### Accountability
 
-
+The insights from modelling is used towards good and responsible intentions i.e. improving customer experience. The use of this model is also to be governed properly to prevent misuse. For example, it is the responsibility of the user to feed clean/suitable data to the model, and to conduct proper analysis and relevant cross-checks to the model output to ensure accurate data. Changes to the model and processes e.g. new data source, changing purpose of model need to adhere to existing relevant governance surrounding AI.  
 
 #### Transparency
+
+Transparency is needed to build trust. In this scenario, limited and open source data is used for a very specific scope, so there is little cause for worry. It is the responsibility of the user to explain the workings of the model, including data pipeline, AI algorithm and output processing and analysis to relevant stakeholders. 
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
