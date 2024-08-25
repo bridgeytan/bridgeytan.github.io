@@ -187,6 +187,44 @@ Common words such as “Lounge”, “class”, “business” and “first” s
 
 This topic most likely focuses on timeliness of the flights, and also general experience overall. Reviews under this topic include “Due to delayed take off I risked missing my connecting flight. Thanks to the excellent premium host service… I managed to be on time!”
 
+### BERT
+
+The next topic modelling technique is BERTopic, a topic modelling technique using BERT embeddings to represent text. Because it makes use of pre-trained transformer based language models, the generated topics are more likely to be more accurate and semantically meaningful. For this modelling technique, the raw data of 'ReviewBody' was used. No text pre-processing was done so as to capture all the contextual semantics.  
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/ffb07b98-d0f1-4030-aefa-664048a2d9b1">
+</p>
+
+When running the BERTopic model, it will automatically determine the number of topics based on the underlying data as part of its default algorithm. The model grouped the data into 22 topics.  
+<p align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/d81938a9-a3d7-4dd5-b237-b47e7ebb9c11">
+</p>
+
+However, when visualising the intertopic distance map, it suggests that there were 3 clusters, similar to the LDA model. This may happen because the model first groups the topics into fine grained clusters to account for the subtle differences between similar topics.  
+
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/user-attachments/assets/4fb53d63-32e6-49d5-b72c-6e2567a5b299">
+</p>
+Based on the intertopic distance map, the 22 topics were then manually grouped together for topic reduction. Similar to the previous model, the important keywords were then visualised as a word cloud for easy interpretation. Similarly, the number of words per topic were also increased for assisting with context.
+
+#### Topic 1
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/c7c458fe-4d7c-40a5-ad4a-21be78244194">
+</p>
+
+The keywords in this topic is very similar to the LDA model, with common keywords such as "Heathrow" and "London". This suggests that the first topic also focuses on the experience in Heathrow Airport.
+
+#### Topic 2
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/8311aca1-c923-4e9a-854d-fdd6f40f4140">
+</p>
+
+The keywords in this topic are also strikingly similar to the 2nd topic in the LDA model, with words like "first", "business" and "lounge" that suggest 
+
+#### Topic 3
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/4f23c453-4a8c-456c-be00-1927d5c4041c">
+</p>
+
 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
