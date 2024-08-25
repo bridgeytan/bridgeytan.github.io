@@ -239,14 +239,36 @@ The LDA coherence score is 0.232 while the BERTopic coherence score is 0.448, su
 
 ## Recommendation and Analysis
 
-This topic modelling exercise has condensed more than 1000 reviews and grouped them into 3-4 prevalent topics - (1) the experience in Heathrow airport, (2) experience in first/business class, (3) good customer service recovery and (4) general timeliness/efficiency of the airline. In terms of actionable insights, these results can serve as great starting points to improve customer experience, marketing and operations. For example, we can leverage on the positive image of British Airways in Heathrow airport to expand market share of travellers in and out of London. This can be done by further investing in the airport experience such as improving check-in efficiency, upgrading amenities, collaborations to have expedited security lanes for BA passengers etc.  Similarly, these can also be applied to first/business class experiences. By cementing British Airway's image of luxurious first/business class lounges and seamless experience, further marketing and promotions can be done to increase the market share of high-end customers. 
+This topic modelling exercise has condensed more than 1000 reviews and grouped them into 3-4 prevalent topics - (1) the experience in Heathrow airport, (2) experience in first/business class, (3) good customer service recovery and (4) general timeliness/efficiency of the airline.  
+
+In terms of actionable insights, these results can serve as great starting points to improve customer experience, marketing and operations. For example, we can leverage on the positive image of British Airways in Heathrow airport to expand market share of travellers in and out of London. This can be done by further investing in the airport experience such as improving check-in efficiency, upgrading amenities, collaborations to have expedited security lanes for BA passengers etc.  Similarly, these can also be applied to first/business class experiences. By cementing British Airway's image of luxurious first/business class lounges and seamless experience, further marketing and promotions can be done to increase the market share of high-end customers. 
 
 Nonetheless, all of these topics have to be further analysed alongside a similar analysis of negative reviews. If the same topics of discussion occur in both positive and negative reviews, it is an indication that the experiences and services provided by British Airways are not consistent. If that is the case, then further improvement is needed to ensure that there is uniformity across the services provided. If the topics in positive reviews and negative reviews are different, then there are clear areas where British Airways have done well and areas that need improvement.
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+#### Privacy
+
+The information was scraped online on airlinequality.com, which is open to the public. In terms of personally identifable information, the original dataset only contained the names of the reviewers, which was not used for analysis or shown in the analysis. No other personal or private information was obtained.  
+
+In terms of consent, the GDPR has outlined 6 reasons in which web scraping is lawful for processing personal data. One of the reasons is Legitimate Interests, where "Legitimate interests pursued by the data controller or a third party can serve as a lawful basis. This involves balancing the interests of the scraper against the privacy rights of the individuals." (https://www.blog.datahut.co/post/guide-to-legal-and-transparent-data-practices-in-web-scraping-under-gdpr#:~:text=Consent%3A%20If%20individuals%20have%20given%20explicit%20and%20informed,third%20party%20can%20serve%20as%20a%20lawful%20basis.) In this instance, a company scraping online reviews to analyse public sentiment about its brand, in order to improve goods and services provided, may be considered as legitimate interest.  
+
+#### Fairness
+
+This point talks about inherent biasness in data, such as AI discriminating against gender/race in resumes due to inherent biases in the training data. In this dataset, exploratory data analysis (not covered above) revealed that majority of reviews were negative, as customers tended to only give reviews when they have undergone a negative experience. However, because topic modelling was done separately on positive and negative data, the biasness in data is circumvented.  
+
+If we have official data from British Airways, we are able to cross-check and see if any particular demographics are over-represented and do fair sampling of each demographic. For example, Heathrow airport might be one of the keywords because majority of the British Airway flights operate in/out of Heathrow, not because Heathrow is doing a particularly good job.  
+
+#### Accuracy
+
+The accuracy of topic modelling is done to the best of abiliies to ensure that there is no misclassification or misinterpretation of the topics that could lead to incorrect conclusions. The steps taken from data processing and modelling were documented to ensure traceability and replication.  Multiple modelling techniques were used and evaluated to ensure most accurate results.  
+
+#### Accountability
+
+
+
+#### Transparency
 
 ## Source Codes and Datasets
 Upload your model files and dataset into a GitHub repo and add the link here. 
