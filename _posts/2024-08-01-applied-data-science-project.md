@@ -19,8 +19,10 @@ Our team focuses on how we can improve British Airway's business via enhancing c
 |-----|-------------------------------------------------------------------------------------------------|---------|
 | 1   | To reduce response time by 10% by identifying significant areas of concern through topic modelling and association rule mining for automation of replies | Yan     |
 | 2   | To analyse review topics for the four different seat types for a more targeted marketing approach, improving business by 10% | Carlin  |
-| 3   | To identify areas of customer satisfaction for marketing purposes, to improve business by 10%   | Bridget |
+| **3**   | **To identify areas of customer satisfaction for marketing purposes, to improve business by 10%**   | **Bridget** |
 | 4   | To reduce negative review sentiments by 10% to improve customer satisfaction and demand.         | Vivienne|
+
+We will focus on (3) identifying areas of customer satisfaction for marketing purposes to improve business by 10%.
 
 <br>
 The project plan following the CRISP-DM framework is as below:  
@@ -88,6 +90,8 @@ Missing values were detected these fields:
 **Wifi&Connectivity:** (~83.5%)  
 
 For columns where missing values make up less than 10% of the dataset (OverallRating, CabinStaffService, SeatComfort), missing values were removed. 
+
+#### Text Pre-processing 
 <p align="center">
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/d4e387a2-9be3-4e97-84c2-297b901bc660">
 </p>
@@ -130,11 +134,22 @@ Words like 'us', 'on' and 'h' were removed.
 </p>
 
 Lemmatization was conducted to normalise the tokens into a single base form e.g. flying to fly. Map POS tags to WordNet POS Tags was used to facilitate lemmatization e.g. conjunctions, prepositions, determiners, verbs etc. Certain POS such as coordinating conjunction, preposition, determiner, personal pronouns were removed as they do not add meaningful information for subsequent clustering/topic modelling. 
-Stemming was not performed to retain context-specific terms for further analysis. 
+Stemming was not performed to retain context-specific terms for further analysis.
 
+#### Filtering for data where OverallRating >= 7
+
+As this business goal looks into good reviews, only data where the OverallRating of 7 and more are included. There is a total of 1323 rows within this filtered dataset.
+<br>
 
 ### Modelling
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+
+We will compare two models, Latent Dirichlet Allocation (LDA) and Bidirectional Encoder Representations from Transformers (BERT).
+
+#### LDA
+
+LDA is a widely used topic modelling technique that provides interpretable results and can be scaled efficiently. 
+
+
 
 ### Evaluation
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
