@@ -186,7 +186,7 @@ Common words such as “Lounge”, “class”, “business” and “first” s
 </p>
 
 This topic most likely focuses on timeliness of the flights, and also general experience overall. Reviews under this topic include “Due to delayed take off I risked missing my connecting flight. Thanks to the excellent premium host service… I managed to be on time!”
-
+<br>
 ### BERT
 
 The next topic modelling technique is BERTopic, a topic modelling technique using BERT embeddings to represent text. Because it makes use of pre-trained transformer based language models, the generated topics are more likely to be more accurate and semantically meaningful. For this modelling technique, the raw data of 'ReviewBody' was used. No text pre-processing was done so as to capture all the contextual semantics.  
@@ -218,21 +218,30 @@ The keywords in this topic is very similar to the LDA model, with common keyword
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/8311aca1-c923-4e9a-854d-fdd6f40f4140">
 </p>
 
-The keywords in this topic are also strikingly similar to the 2nd topic in the LDA model, with words like "first", "business" and "lounge" that suggest 
+The keywords in this topic are also strikingly similar to the 2nd topic in the LDA model, with words like "first", "business" and "lounge" that suggest overall experience in the upper classes.
 
 #### Topic 3
 <p align="center">
   <img width="600" alt="image" src="https://github.com/user-attachments/assets/4f23c453-4a8c-456c-be00-1927d5c4041c">
 </p>
 
+The 3rd topic includes keywords like "refund", "cancel" and "ticket" most likely focus on the ease of service recovery. For example, one of the documents under this topic was talking about how easy the process of refund was, and that the refund was quick e.g. “Everyone I talked to was extremely friendly and helpful… refunded promptly for part of my flight that had been cancelled … They have really shown flexibility here”.
 
 ### Evaluation
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+In terms of evaluating the LDA and BERTopic model, a metric that can be used is the coherence score, as other common metrics like the perplexity score cannot be applied to pre-trained model embeddings like BERTopic.  
+
+The LDA coherence score is 0.232 while the BERTopic coherence score is 0.448, suggesting that the BERTopic model performed better. However, qualitatively, both models were very similar as 2 out of 3 topics were most likely the same topics.  
+
+<p align="center">
+  <img width="600" alt="image" src="https://github.com/user-attachments/assets/600f219a-bc9a-408a-af28-09db27e00154">
+</p>
+
 
 ## Recommendation and Analysis
-Explain the analysis and recommendations
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+This topic modelling exercise has condensed more than 1000 reviews and grouped them into 3-4 prevalent topics - (1) the experience in Heathrow airport, (2) experience in first/business class, (3) good customer service recovery and (4) general timeliness/efficiency of the airline. In terms of actionable insights, these results can serve as great starting points to improve customer experience, marketing and operations. For example, we can leverage on the positive image of British Airways in Heathrow airport to expand market share of travellers in and out of London. This can be done by further investing in the airport experience such as improving check-in efficiency, upgrading amenities, collaborations to have expedited security lanes for BA passengers etc.  Similarly, these can also be applied to first/business class experiences. By cementing British Airway's image of luxurious first/business class lounges and seamless experience, further marketing and promotions can be done to increase the market share of high-end customers. 
+
+Nonetheless, all of these topics have to be further analysed alongside a similar analysis of negative reviews. If the same topics of discussion occur in both positive and negative reviews, it is an indication that the experiences and services provided by British Airways are not consistent. If that is the case, then further improvement is needed to ensure that there is uniformity across the services provided. If the topics in positive reviews and negative reviews are different, then there are clear areas where British Airways have done well and areas that need improvement.
 
 ## AI Ethics
 Discuss the potential data science ethics issues (privacy, fairness, accuracy, accountability, transparency) in your project. 
